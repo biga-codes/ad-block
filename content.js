@@ -6,7 +6,17 @@ const blocked_domains = [
     "*://audio-ec.spotify.com/*",
   "*://spclient.wg.spotify.com/adlogic/*",
   "*://spclient.wg.spotify.com/ads/*",
-  "*://*.ads.spotify.com/*"
+  "*://*.ads.spotify.com/*",
+  "*://*.googlesyndication.com/*",
+ "*://*.google-analytics.com/*",
+"*://*.quantserve.com/*",
+ "*://*.scorecardresearch.com/*",
+ "*://*.zedo.com/*",
+ "*://*.doubleclick.net/*",
+ "*://partner.googleadservices.com/*",
+ "*://creative.ak.fbcdn.net/*",
+ "*://*.adbrite.com/*",
+ "*://*.exponential.com/*",
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(

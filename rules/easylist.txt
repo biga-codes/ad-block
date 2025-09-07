@@ -1,0 +1,7 @@
+||doubleclick.net^
+||adservice.google.com^
+||googlesyndication.com^
+||adsafeprotected.com^
+||audio-ec.spotify.com^
+||spclient.wg.spotify.com/adlogic^
+||ads.spotify.com^
