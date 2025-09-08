@@ -4,13 +4,15 @@
   "version": "1.0",
   "description": "Blocks ads using filter lists and user rules.",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
     "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
     "<all_urls>"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -19,9 +21,17 @@
       "run_at": "document_end"
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup/popup.html"
-   
   },
-  "options_page": "options/options.html"
+  "options_page": "options/options.html",
+  "declarative_net_request": {
+  "rule_resources": [
+    {
+      "id": "blocklist",
+      "enabled": true,
+      "path": "rules/rules.json"
+    }
+  ]
+}
 }
